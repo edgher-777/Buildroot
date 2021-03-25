@@ -1,4 +1,4 @@
-Files directories:
+Files directories to be replaced:
 
 board/raspberrypi4/genimage-raspberrypi4.cfg
 
