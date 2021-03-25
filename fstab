@@ -1,4 +1,2 @@
 /dev/root / auto ro 0 1
-tmpfs /var tmpfs mode=1777 0 0
-/dev/sdd3 /etc/NetworkManager/system-connections Ext4 rw,bind 0 1
-
+LABEL=casa /etc/NetworkManager/system-connections ext4 defaults,rw 0 2
