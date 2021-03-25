@@ -1,3 +1,5 @@
+These changes are to create a RO system and set a RW folder creating a disk partition
+
 File directory to be replaced:
 board/raspberrypi4/genimage-raspberrypi4.cfg
 
