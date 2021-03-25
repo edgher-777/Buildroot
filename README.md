@@ -1,5 +1,8 @@
-Install kenell install in :  
-Target packages -- system tools  --  systemd
+Files directories:
 
-Uncheck remount filesystem read-write during boot in:
-System configuration
+board/raspberrypi4/genimage-raspberrypi4.cfg
+board/raspberrypi4/Overlay
+
+System configuration:
+
+Rootfilesystem overlay directories: board/raspberrypi4/Overlay
