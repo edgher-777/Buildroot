@@ -1,2 +1,6 @@
 /dev/root / auto ro 0 1
-LABEL=casa /etc/NetworkManager/system-connections ext4 defaults,rw 0 2
+LABEL=NS /CFA002WIFI ext4 rw 0 2
+/CFA002WIFI/wifi /etc/NetworkManager/system-connections none rw,bind 0 0
+/CFA002WIFI/traceability /CFA002WIFI/traceability none rw,bind 0 0
+/CFA002WIFI/SerialNumber /CFA002WIFI/SerialNumber none rw,bind 0 0
+/CFA002WIFI/update /CFA002WIFI/update none rw,bind 0 0
