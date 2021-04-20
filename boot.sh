@@ -17,7 +17,6 @@ for BOOT_SLOT in "${BOOT_ORDER}"; do
       echo "Found valid RAUC slot A"
       setenv bootpart "/dev/mmcblk0p3"
       setenv raucslot "A"
-      setenv BOOT_DEV "mmc 0:3"
     fi
   elif test "x${BOOT_SLOT}" = "xB"; then
     if test ${BOOT_B_LEFT} -gt 0; then
@@ -25,7 +24,6 @@ for BOOT_SLOT in "${BOOT_ORDER}"; do
       echo "Found valid RAUC slot B"
       setenv bootpart "/dev/mmcblk0p4"
       setenv raucslot "B"
-      setenv BOOT_DEV "mmc 0:4"
     fi
   fi
 done
@@ -41,8 +39,12 @@ else
   reset
 fi
 
+if test "${raucslot}" = "A"; then
+  setenv BOOT_DEV "mmc 0:3"
+elif test "${raucslot}" = "B"; then
+  setenv BOOT_DEV "mmc 0:4"
+fi
+
 fatload mmc 0:1 ${kernel_addr_r} zImage
 fatload mmc 0:1 ${fdt_addr} bcm2711-rpi-4-b.dtb
-
-if test ! -e mmc 0:2 uboot.env; then saveenv; fi;
 bootz ${kernel_addr_r} - ${fdt_addr}
