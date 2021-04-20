@@ -4,6 +4,7 @@ test -n "${BOOT_ORDER}" || setenv BOOT_ORDER "A B"
 test -n "${BOOT_A_LEFT}" || setenv BOOT_A_LEFT 3
 test -n "${BOOT_B_LEFT}" || setenv BOOT_B_LEFT 3
 test -n "${BOOT_DEV}" || setenv BOOT_DEV "mmc 0:1"
+saveenv
 
 setenv bootpart
 setenv raucslot
@@ -30,7 +31,6 @@ done
 
 if test -n "${bootpart}"; then
   setenv bootargs "${bootargs} root=${bootpart} rauc.slot=${raucslot}"
-  saveenv
 else
   echo "No valid RAUC slot found. Resetting tries to 3"
   setenv BOOT_A_LEFT 3
