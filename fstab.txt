@@ -1,0 +1,7 @@
+/dev/root / auto ro 0 1
+	> /dev/mmcblk0p2 /boot vfat rw 00
+	> LABEL=ENV /boot vfat rw 0 0
+/boot/wifi /etc/NetworkManager/system-connections none rw,bind 0 0
+/boot/traceability /boot/traceability none rw,bind 0 0
+/boot/SerialNumber /boot/SerialNumber none rw,bind 0 0
+/boot/update /boot/update none rw,bind 0 0
