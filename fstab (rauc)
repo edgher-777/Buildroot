@@ -1,0 +1,2 @@
+/dev/root / auto rw 0 1
+/dev/mmcblk0p2 /boot vfat defaults 0 0
