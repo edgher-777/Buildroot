@@ -16,9 +16,11 @@ board/raspberrypi4/overlay/data
 board/raspberrypi4/overlay/boot
 board/raspberrypi4/overlay/fstab*
 board/raspberrypi4/overlay/fw_env.config*
-board/raspberrypi4/overlay/rauc/demo.cert.pem
-board/raspberrypi4/overlay/rauc/demo.key.pem
-board/raspberrypi4/overlay/rauc/system.config
+board/raspberrypi4/overlay/rauc/demo.cert.pem*
+board/raspberrypi4/overlay/rauc/demo.key.pem*
+board/raspberrypi4/overlay/rauc/system.config*
+board/cmdline.txt*
+board/config.txt*
 
 System configuration:
 Rootfilesystem overlay directories: board/raspberrypi4/overlay
