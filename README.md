@@ -11,6 +11,14 @@ board/raspberrypi4/overlay/CFA002WIFI/wifi
 board/raspberrypi4/overlay/CFA002WIFI/update
 board/raspberrypi4/overlay/CFA002WIFI/traceability
 board/raspberrypi4/overlay/CFA002WIFI/SerialNumber
+board/raspberrypi4/overlay/var/lock
+board/raspberrypi4/overlay/data
+board/raspberrypi4/overlay/boot
+board/raspberrypi4/overlay/fstab*
+board/raspberrypi4/overlay/fw_env.config*
+board/raspberrypi4/overlay/rauc/demo.cert.pem
+board/raspberrypi4/overlay/rauc/demo.key.pem
+board/raspberrypi4/overlay/rauc/system.config
 
 System configuration:
 Rootfilesystem overlay directories: board/raspberrypi4/overlay
