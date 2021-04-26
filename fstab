@@ -1,6 +1,9 @@
-/dev/root / auto ro 0 1
-LABEL=NS /CFA002WIFI ext4 rw 0 2
-/CFA002WIFI/wifi /etc/NetworkManager/system-connections none rw,bind 0 0
-/CFA002WIFI/traceability /CFA002WIFI/traceability none rw,bind 0 0
-/CFA002WIFI/SerialNumber /CFA002WIFI/SerialNumber none rw,bind 0 0
-/CFA002WIFI/update /CFA002WIFI/update none rw,bind 0 0
+/dev/root / auto rw 0 1
+/dev/mmcblk0p2 /boot vfat defaults 0 0
+tmpfs /var/lock tmpfs defaults 0 0
+tmpfs /var/tmp tmpfs defaults 0 0
+LABEL=DATA /data ext4 rw 0 0
+/data/wifi /etc/NetworkManager/system-connections none rw,bind 0 0
+/data/traceability /data/traceability none rw,bind 0 0
+/data/SerialNumber /data/SerialNumber none rw,bind 0 0
+/data/update /data/update none rw,bind 0 0
