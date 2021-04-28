@@ -8,3 +8,4 @@ LABEL=DATA /data ext4 rw 0 0
 /data/update /data/update none rw,bind 0 0
 tmpfs /var/lib/systemd/timesync tmpfs defaults 0 0
 tmpfs /run/systemd/timesync tmpfs defaults 0 0
+/etc/cpuinfo /proc/cpuinfo none bind 0 0
