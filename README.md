@@ -19,6 +19,7 @@ board/raspberrypi4/overlay/fw_env.config*
 board/raspberrypi4/overlay/rauc/demo.cert.pem*
 board/raspberrypi4/overlay/rauc/demo.key.pem*
 board/raspberrypi4/overlay/rauc/system.config*
+board/raspberrypi4/overlay/etc/cpuinfo*
 board/cmdline.txt*
 board/config.txt*
 
