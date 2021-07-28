@@ -1,7 +1,6 @@
 import os
 
-logger = logging.getLogger("DEBUG")
-logger.debug("Checking partition space")
+print("Checking partition space")
 envVar=os.popen("fw_printenv partitionData").strip().read()
 
 while envVar != "resized":
