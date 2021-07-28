@@ -13,6 +13,7 @@ while envVar != "resized":
         resizePartition=os.popen("resize2fs /dev/mmcblk0p6")
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
     else:
+        logger.debug("Partition rezised")
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
 logger.debug("Disabling rezise service")
 os.popen("systemctl disable resizeOnce").read()
