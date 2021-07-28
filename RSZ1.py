@@ -13,3 +13,5 @@ partitionSize=int(os.popen("df -h --out=size /dev/mmcblk0p6").read())
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
     else:
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
+
+os.popen("systemctl disable RSZ")
