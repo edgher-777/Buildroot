@@ -1,11 +1,10 @@
 import os
 
 print("Checking partition space")
-envVar=os.popen("fw_printenv partitionData{-.ñ+.,,{ñ+:;[Ñ*¡?=)(").read()
+envVar=os.popen("fw_printenv partitionData").read()
 print(envVar)
 
 while envVar != "partitionData=resized\n":
-    envVar=os.popen("fw_printenv partitionData").read()
     try:
         s=os.popen("df /dev/mmcblk0p6 | grep /dev/mmcblk0p6").read()
         l=s.split()
