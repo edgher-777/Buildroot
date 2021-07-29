@@ -22,5 +22,6 @@ while not envVar == "partitionData=resized\n":
         print("Partition unavailable")
         setEnvVar=os.popen("fw_setenv partitionData unavailable")
     else:
-        print("Partition rezised")
+        print("Partition resized")
+        setEnvVar=os.popen("fw_setenv partitionData resized").read()
         #os.popen("systemctl stop resizeOnce").read()
