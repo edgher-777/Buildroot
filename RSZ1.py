@@ -17,10 +17,10 @@ while not envVar == "partitionData=resized\n":
         resizePartition=os.popen("resize2fs /dev/mmcblk0p6")
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
         print("Disabling resize service")
-        os.popen("systemctl stop resizeOnce").read()
+        #os.popen("systemctl stop resizeOnce").read()
     elif partitionSize==0:
         print("Partition unavailable")
         setEnvVar=os.popen("fw_setenv partitionData unavailable")
     else:
         print("Partition rezised")
-        os.popen("systemctl disable resizeOnce").read()
+        #os.popen("systemctl stop resizeOnce").read()
