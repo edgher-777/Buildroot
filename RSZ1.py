@@ -1,10 +1,10 @@
 import os
 
 print("Checking partition space")
-envVar=os.popen("fw_printenv partitionData").read()
+envVar=os.popen("fw_printenv partitionData{-.ñ+.,,{ñ+:;[Ñ*¡?=)(").read()
 print(envVar)
 
-while envVar != "resized":
+while envVar != "partitionData=resized\n":
     envVar=os.popen("fw_printenv partitionData").read()
     try:
         s=os.popen("df /dev/mmcblk0p6 | grep /dev/mmcblk0p6").read()
@@ -17,12 +17,11 @@ while envVar != "resized":
         print("Resizing Partition")
         resizePartition=os.popen("resize2fs /dev/mmcblk0p6")
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
+        print("Disabling resize service")
+	    os.popen("systemctl disable resizeOnce").read()
     elif partitionSize==0:
         print("Partition unavailable")
         setEnvVar=os.popen("fw_setenv partitionData unavailable")
     else:
         print("Partition rezised")
-        setEnvVar=os.popen("fw_setenv partitionData resized").read()
-
-print("Disabling rezise service")
-os.popen("systemctl disable resizeOnce").read()
+        os.popen("systemctl disable resizeOnce").read()
