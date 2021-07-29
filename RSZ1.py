@@ -5,6 +5,7 @@ envVar=os.popen("fw_printenv partitionData").read()
 print(envVar)
 
 while not envVar == "partitionData=resized\n":
+    envVar=os.popen("fw_printenv partitionData").read()
     try:
         s=os.popen("df /dev/mmcblk0p6 | grep /dev/mmcblk0p6").read()
         l=s.split()
@@ -22,6 +23,6 @@ while not envVar == "partitionData=resized\n":
         print("Partition unavailable")
         setEnvVar=os.popen("fw_setenv partitionData unavailable")
     else:
-        print("Partition resized")
+        print("Partition ready")
         setEnvVar=os.popen("fw_setenv partitionData resized").read()
         #os.popen("systemctl stop resizeOnce").read()
