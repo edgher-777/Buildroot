@@ -1,13 +1,11 @@
 [Unit]
-Description=Resize partition DATA
-After=network.target
+Description=Partition resize device
+#After= network.target
 
 [Service]
-Type=simple
-User=root
+Type=oneshot
 ExecStart=/bin/python3 -u /usr/bin/CFA002WIFI/RSZ1.py
-WorkingDirectory=/usr/bin/CFA002WIFI
-Restart=always
+RemainAfterExit=false
 
 [Install]
 WantedBy=multi-user.target
