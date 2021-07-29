@@ -5,7 +5,6 @@ Description=Partition resize device
 [Service]
 Type=oneshot
 ExecStart=/bin/python3 -u /usr/bin/CFA002WIFI/RSZ1.py
-RemainAfterExit=false
 
 [Install]
 WantedBy=multi-user.target
